@@ -26,7 +26,7 @@ public class View {
     public void mostrarBibliotecas(List<Biblio> biblios) {
         System.out.println("LISTA DE Bibliotecas");
 
-        biblios.forEach(biblio -> System.out.println(biblio.nom + " : " + biblio.city));
+        biblios.forEach(biblio -> System.out.println(biblio.nombre));
     }
 
     public BiblioDTO pedirDatosBibliotecaNueva() {

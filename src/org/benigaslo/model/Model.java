@@ -11,7 +11,7 @@ public class Model {
 
 
     public void guardarBiblioteca(BiblioDTO datos){
-        biblios.add(new Biblio(datos.nombre, datos.ciudad));
+        biblios.add(new Biblio());
     }
 
 

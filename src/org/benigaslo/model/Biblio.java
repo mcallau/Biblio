@@ -3,7 +3,7 @@ package org.benigaslo.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class agenda{
-    public String titol;
-    List<Contacte> contactes=new ArrayList<>();
+public class Biblio {
+    public String nombre;
+    List<Llibre> llibres = new ArrayList<>();
 }
