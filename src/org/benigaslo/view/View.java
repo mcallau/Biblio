@@ -1,7 +1,7 @@
 package org.benigaslo.view;
 
 import org.benigaslo.controller.BiblioDTO;
-import org.benigaslo.model.Biblio;
+import org.benigaslo.model.Agenda;
 
 import java.util.List;
 import java.util.Scanner;
@@ -23,10 +23,10 @@ public class View {
         return opcion;
     }
 
-    public void mostrarBibliotecas(List<Biblio> biblios) {
+    public void mostrarBibliotecas(List<Agenda> agenda) {
         System.out.println("LISTA DE Bibliotecas");
 
-        biblios.forEach(biblio -> System.out.println(biblio.nombre));
+        agenda.forEach(agenda -> System.out.println(agenda.nombre));
     }
 
     public BiblioDTO pedirDatosBibliotecaNueva() {
