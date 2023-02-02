@@ -1,11 +1,9 @@
 package org.benigaslo.model;
 
-public class Llibre {
-    public String nom;
-    int any;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Llibre(String elprmerdato, int elsegondato) {
-        nom = elprmerdato;
-        any = elsegondato;
-    }
+public class contacte {
+    public String nom;
+    List<Info> infos =new ArrayList<>();
 }
