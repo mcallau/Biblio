@@ -8,29 +8,24 @@ import java.util.List;
 
 public class Controller {
 
+    View view = new View();
+    Model model = new Model();
+
 
     public void acorrer(){
-        View view = new View();
-        Model model = new Model();
-
         while(true) {
             view.mostrarMenu();
 
-            int papa = view.pedirOpcion();
+            int o = view.pedirOpcion();
 
-            if (papa == 2) {
+            if (o == 1) {
+                AgendaDTO datos = view.pedirDatosAgendaNueva();
 
-                List<Agenda> jp = model.obtenerListaBibliotecas();
-                view.mostrarBibliotecas(jp);
-
-
-            } else if (papa == 1) {
-                BiblioDTO datos = view.pedirDatosBibliotecaNueva();
-
-                model.guardarBiblioteca(datos);
+                model.guardarAgenda(datos);
+            } else if (o == 2) {
+                List<Agenda> agendas = model.obtenerListaAgendas();
+                view.mostrarAgendas(agendas);
             }
         }
-
-
     }
 }

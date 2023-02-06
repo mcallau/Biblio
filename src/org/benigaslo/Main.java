@@ -9,3 +9,15 @@ public class Main {
 
     }
 }
+
+
+
+/*
+
++-------+            return            +-------------+          (params)               +-------+
+|       | ------ dades guardades ----> |             | ----- què mostrar / dades ----> |       |
+| MODEL |                              | CONTROLADOR |                                 | VISTA |    o
+|       | <--- actualització dades --- |             | <------ entrada usuari -------- |       |   /|\
++-------+          (params)            +-------------+            return               +-------+   / \
+
+ */

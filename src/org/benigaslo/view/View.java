@@ -1,6 +1,6 @@
 package org.benigaslo.view;
 
-import org.benigaslo.controller.BiblioDTO;
+import org.benigaslo.controller.AgendaDTO;
 import org.benigaslo.model.Agenda;
 
 import java.util.List;
@@ -11,31 +11,30 @@ public class View {
 
     public void mostrarMenu() {
         System.out.println("MENU");
-        System.out.println("1) Añadir biblioteca");
-        System.out.println("2) Ver bibliotecas");
+        System.out.println("1) Añadir agenda");
+        System.out.println("2) Ver agendas");
     }
 
     public int pedirOpcion() {
-        System.out.println("Opcion: ");
+        System.out.println("OPCION: ");
         int opcion = scanner.nextInt();
         scanner.nextLine();
 
         return opcion;
     }
 
-    public void mostrarBibliotecas(List<Agenda> agenda) {
+    public void mostrarAgendas(List<Agenda> agendas) {
         System.out.println("LISTA DE Bibliotecas");
 
-        agenda.forEach(agenda -> System.out.println(agenda.nombre));
+        agendas.forEach(agenda -> System.out.println(agenda.nombre + " " + agenda.descripcion));
     }
 
-    public BiblioDTO pedirDatosBibliotecaNueva() {
+    public AgendaDTO pedirDatosAgendaNueva() {
         System.out.println("Nombre: ");
         String nombre = scanner.nextLine();
-        System.out.println("Ciudad: ");
-        String ciudad = scanner.nextLine();
+        System.out.println("Descripcion: ");
+        String descripcion = scanner.nextLine();
 
-        return new BiblioDTO(nombre, ciudad);
-
+        return new AgendaDTO(nombre, descripcion);
     }
 }
